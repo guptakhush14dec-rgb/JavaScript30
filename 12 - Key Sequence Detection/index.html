@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <style>
+      body {
+        background-image: url(background.png);
+        background-size: cover;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 10vh;
+        overflow: hidden; 
+      }
+      .emoji {
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%); 
+        font-size: 70px;
+        transition: all 0.5s ease-in-out; 
+        user-select: none;
+      }
+      h1{
+        margin-bottom: 190px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Unlock the magic: Type the 2-word greeting every coder knows</h1>
+
+    <div class="emoji" style="left: 23%;">👻</div>
+    <div class="emoji" style="left: 29%;">👽</div>
+    <div class="emoji" style="left: 35%;">👾</div>
+    <div class="emoji" style="left: 41%;">🤖</div>
+    <div class="emoji" style="left: 47%;">🎃</div>
+    <div class="emoji" style="left: 53%;">🚀</div>
+    <div class="emoji" style="left: 59%;">🍕</div>
+    <div class="emoji" style="left: 65%;">🦄</div>
+    <div class="emoji" style="left: 71%;">🔥</div>
+    <div class="emoji" style="left: 77%;">👀</div>
+
+    <script>
+      const pressed = [];
+      const secretCode = "helloworld";
+
+      window.addEventListener("keyup", (e) => {
+        if (e.key === " ") return;
+        // console.log(e.key);
+        pressed.push(e.key.toLowerCase());
+
+        // Keeps the array size equal to your secret word
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+        
+        if (pressed.join("").includes(secretCode)) {
+          startRandomMovement();
+          pressed.length = 0; 
+        }
+      });
+
+      function startRandomMovement() {
+        const emojis = document.querySelectorAll(".emoji");
+
+        for (let item of emojis) {
+          setInterval(() => {
+            const randomX = Math.random() * (window.innerWidth - 100); 
+            const randomY = Math.random() * (window.innerHeight - 100); 
+            // Subtract 100 to keep the emoji within the visible screen margin
+            
+            item.style.left = randomX + "px";
+            item.style.top = randomY + "px";
+          }, 500);
+        }
+      }
+    </script>
+  </body>
+</html>

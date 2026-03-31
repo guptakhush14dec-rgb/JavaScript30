@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+  <link rel="icon" href="https://fav.farm/✅" />
+</head>
+
+<body>
+
+  <div class="clock">
+    <div class="clock-face">
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
+      <div class="pin"></div>
+      <div class="number n12">12</div>
+      <div class="number n3">3</div>
+      <div class="number n6">6</div>
+      <div class="number n9">9</div>
+    </div>
+  </div>
+
+
+  <style>
+    html {
+      background: url("background.png");
+      background-size: cover;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid #273E47;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      backdrop-filter: blur(1px);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px);
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      background: black;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+      border-radius: 20%;
+    }
+
+    .hour-hand {
+      background: #D8973C;
+      height: 8px;
+      width: 35%;
+      left: 15%;
+    }
+
+    .min-hand {
+      background: #457B9D;
+      height: 6px;
+    }
+
+    .second-hand {
+      background: #E63946;
+      height: 3px;
+    }
+
+    .pin {
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid #1D3557;
+      z-index: 10;
+    }
+
+    .number {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      font-size: 2.5rem;
+      color: #273E47;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .n12 {
+      top: 0.5rem;
+    }
+
+    .n6 {
+      bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .n3 {
+      top: 50%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      width: auto;
+      height: auto;
+      left: auto;
+    }
+
+    .n9 {
+      top: 50%;
+      left: 0.5rem;
+      transform: translateY(-50%);
+      width: auto;
+      height: auto;
+      right: auto;
+    }
+  </style>
+
+  <script>
+    const secondHand = document.querySelector('.second-hand');
+    const minsHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+    function setDate() {
+      const now = new Date();
+      const seconds = now.getSeconds();
+
+      if (seconds === 0) {
+        secondHand.style.transition = 'none';
+      } else {
+        secondHand.style.transition = 'all 0.05s';
+      }
+
+      const secondsDegrees = ((seconds / 60) * 360) + 90;
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+      const mins = now.getMinutes();
+      const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
+      minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+      const hour = now.getHours();
+      const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
+      hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+    }
+
+    setInterval(setDate, 1000);
+
+    // Runs the function once immediately on page load so the clock doesn't look frozen for the first second
+    setDate();  
+
+  </script>
+</body>
+
+</html>
