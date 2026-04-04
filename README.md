@@ -5,29 +5,26 @@ This repository contains my progress and code for the [JavaScript30](https://jav
 While the core concepts follow the original tutorial, I am actively expanding on the base codebase by:
 * Adding **custom UI/UX designs**
 * Implementing **extended JavaScript logic**
-* Experimenting with advanced DOM manipulation techniques
 
 ---
 
 ## ✨ Custom Modifications & Enhancements
 
-While working on these 30 projects, I didn't just follow the tutorial step by step—I extended them by adding my own features, improving the logic, and enhancing the overall user experience. I treated each project like a real-world application, focusing on understanding, improving, and building upon the code instead of just replicating it.
-
-Here are the key modifications I made:
+Here are some of the key modifications I made to the projects:
 
 ### 🥁 Day 1 – JavaScript Drum Kit
 - Added **click-to-play support** so drums trigger on mouse click, not just keyboard.
 
 ### 🕐 Day 2 – JS and CSS Clock
-- Added **clock numbers** (12, 3, 6, 9), a **center pin**, and **colored hands** (orange = hour, blue = minute, red = second).
+- Added **clock numbers**, a **center pin**, and **colored hands**.
 - Added a **transition-removal fix** that stops the second hand from snapping backward at minute 0.
 
 ### 🎨 Day 3 – CSS Variables
-- Added a **Grayscale slider** as a 4th control that applies a grayscale filter via CSS variable.
+- Added a **Grayscale slider** that applies a grayscale filter via CSS variable.
 - Added a **Reset button** that restores all variables and inputs to their defaults.
 
 ### 🖼️ Day 5 – Flex Panel Gallery
-- Added **accordion behavior** — only one panel can be open at a time; clicking a new one closes the previous.
+- Added **accordion behavior** — only one panel can be open at a time, clicking a new one closes the previous.
 
 ### 🎨 Day 8 – HTML5 Canvas
 - Added an **Eraser toggle** that switches between draw and erase mode.
@@ -35,15 +32,14 @@ Here are the key modifications I made:
 - Added a **mouseenter fix** that resumes drawing when re-entering the canvas with the mouse button still held.
 
 ### 🎬 Day 11 – Custom Video Player
-- Added a **live time display** that updates in real time with zero-padded seconds.
+- Added a **live time display** that updates in real time.
 - Added a **fullscreen button** and **double-click to fullscreen** on the video.
 - Added **keyboard shortcuts** — Space (play/pause), Arrow keys (skip), F (fullscreen).
 - Added **live volume and speed labels** next to the sliders.
 
 ### ⌨️ Day 12 – Key Sequence Detection
-- 10 emojis placed across the screen at fixed positions.
-- On typing `"helloworld"`, each emoji **flies to a new random position every 500ms** continuously.
-- Space key is filtered out during input so it doesn't interfere with typing.
+- 10 emojis fly to random screen positions every 500ms when `"helloworld"` is typed.
+- Space key is ignored so it doesn't interfere with the tracked key array.
 
 ### 💾 Day 15 – LocalStorage
 - Added **Check All** and **Uncheck All** buttons synced to localStorage.
@@ -70,7 +66,7 @@ Here are the key modifications I made:
 - [x] Day 14: JavaScript References VS Copying
 - [x] Day 15: LocalStorage
 - [x] Day 16: Mouse Move Shadow
-- [ ] Day 17: Sort Without Articles
+- [x] Day 17: Sort Without Articles
 - [ ] Day 18: Adding Up Times with Reduce
 - [ ] Day 19: Webcam Booth
 - [ ] Day 20: Speech Detection
