@@ -67,7 +67,7 @@ Here are some of the key modifications I made to the projects:
 - [x] Day 15: LocalStorage
 - [x] Day 16: Mouse Move Shadow
 - [x] Day 17: Sort Without Articles
-- [ ] Day 18: Adding Up Times with Reduce
+- [x] Day 18: Adding Up Times with Reduce
 - [ ] Day 19: Webcam Booth
 - [ ] Day 20: Speech Detection
 - [ ] Day 21: Geolocation
