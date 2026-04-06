@@ -46,9 +46,13 @@ Here are some of the key modifications I made to the projects:
 - Added a **per-item Delete button** that removes items from the list and localStorage.
 - Added **inline contenteditable text editing** with auto-save to localStorage.
 
+### 📸 Day 19 – Webcam Booth
+- Added **Ghosting Effect** and **Magic Colors** toggle buttons.
+- Added **Clear Strip** button that removes all captured photos.
+- Added **mirror effect** to flip the video and canvas
 ---
 
-## 📈 Challenge Progress (16/30 Completed)
+## 📈 Challenge Progress (19/30 Completed)
 
 - [x] Day 1: JavaScript Drum Kit
 - [x] Day 2: JS and CSS Clock
@@ -68,7 +72,7 @@ Here are some of the key modifications I made to the projects:
 - [x] Day 16: Mouse Move Shadow
 - [x] Day 17: Sort Without Articles
 - [x] Day 18: Adding Up Times with Reduce
-- [ ] Day 19: Webcam Booth
+- [x] Day 19: Webcam Booth
 - [ ] Day 20: Speech Detection
 - [ ] Day 21: Geolocation
 - [ ] Day 22: Follow Along Link Highlighter
