@@ -56,7 +56,7 @@ Here are some of the key modifications I made to the projects:
 
 ---
 
-## 📈 Challenge Progress (20/30 Completed)
+## 📈 Challenge Progress (21/30 Completed)
 
 - [x] Day 1: JavaScript Drum Kit
 - [x] Day 2: JS and CSS Clock
@@ -78,7 +78,7 @@ Here are some of the key modifications I made to the projects:
 - [x] Day 18: Adding Up Times with Reduce
 - [x] Day 19: Webcam Booth
 - [x] Day 20: Speech Detection
-- [ ] Day 21: Geolocation
+- [x] Day 21: Geolocation
 - [ ] Day 22: Follow Along Link Highlighter
 - [ ] Day 23: Speech Synthesis
 - [ ] Day 24: Sticky Nav
