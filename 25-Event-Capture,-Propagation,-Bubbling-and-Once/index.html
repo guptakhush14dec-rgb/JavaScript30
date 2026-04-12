@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding JavaScript's Capture</title>
+  <link rel="icon" href="https://fav.farm/✅" />
+</head>
+
+<body class="bod">
+  <h1 style="color: white; margin-bottom: 30px; font-family: sans-serif;">
+    JavaScript Event Bubbling & Capturing
+  </h1>
+  <div class="one">
+    <div class="two">
+      <div class="three">
+      </div>
+    </div>
+  </div>
+
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: black;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .one {
+      background: #DB1A1A;
+      width: 300px;
+      height: 300px;
+    }
+
+    .two {
+      background: #3498db;
+      width: 200px;
+      height: 200px;
+    }
+
+    .three {
+      background: #8CC7C4;
+      width: 100px;
+      height: 100px;
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      background: #D97A2B;
+      color: black;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+
+  <button>CLICK ME</button>
+  <script>
+    const divs = document.querySelectorAll('div');
+    const button = document.querySelector('button');
+
+    function logText(e) {
+      console.log(this.classList.value);
+      // e.stopPropagation(); // stop bubbling! //stops the click right where it happens, killing the chain reaction so no other elements get triggered.
+      // console.log(this);
+    }
+
+    divs.forEach(div => div.addEventListener('click', logText, {
+      capture: false, // (Default) Execution Order: .three -> .two -> .one (Bottom to Top)
+      //capture: true, // Execution Order: .one -> .two -> .three (Top to Bottom)
+      once: true // removes the event listener after it has been triggered a single time.
+    }));
+
+    button.addEventListener('click', () => {
+      console.log('Click!!!');
+    }, {
+      once: true
+    });
+
+  </script>
+</body>
+
+</html>
