@@ -56,7 +56,7 @@ Here are some of the key modifications I made to the projects:
 
 ---
 
-## 📈 Challenge Progress (25/30 Completed)
+## 📈 Challenge Progress (26/30 Completed)
 
 - [x] Day 1: JavaScript Drum Kit
 - [x] Day 2: JS and CSS Clock
@@ -83,7 +83,7 @@ Here are some of the key modifications I made to the projects:
 - [x] Day 23: Speech Synthesis
 - [x] Day 24: Sticky Nav
 - [x] Day 25: Event Capture, Propagation, Bubbling and Once
-- [ ] Day 26: Stripe Follow Along Nav
+- [x] Day 26: Stripe Follow Along Nav
 - [ ] Day 27: Click and Drag
 - [ ] Day 28: Video Speed Controller
 - [ ] Day 29: Countdown Timer
