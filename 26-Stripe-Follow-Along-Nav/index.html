@@ -229,7 +229,7 @@
 
     function handleEnter() {
       this.classList.add('trigger-enter');
-      setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150); // if the mouse is still hovering after 150ms, add the active class
+      setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
       //&& in js means "if the thing on the left is true, then do the thing on the right"
       background.classList.add('open');
 
