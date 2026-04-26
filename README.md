@@ -54,9 +54,21 @@ Here are some of the key modifications I made to the projects:
 ### 🎤 Day 20 – Speech Detection
 - Added a manual **Start Listening button** to give users control over the microphone.
 
+### 🔗 Day 22 – Follow Along Link Highlighter
+- Added **keyboard accessibility** via `focus` event tracking for tab-navigation support.
+
+### ⏩ Day 28 – Video Speed Controller
+- Replaced hover trigger with deliberate **click-and-drag interaction** to prevent accidental activation.
+
+### ⏱️ Day 29 – Countdown Timer
+- Added an **audio alarm** with a Stop/Reset button, and a **visual progress bar**.
+
+### 🔨 Day 30 – Whack A Mole
+- Added **difficulty selector** (Easy/Medium/Hard) for dynamic mole speeds, **live countdown timer**, **hit sound effects**, and fixed **game state management** to prevent multiple game instances if the start button is spammed.
+
 ---
 
-## 📈 Challenge Progress (27/30 Completed)
+## 📈 Challenge Progress (30/30 Completed)
 
 - [x] Day 1: JavaScript Drum Kit
 - [x] Day 2: JS and CSS Clock
@@ -85,9 +97,9 @@ Here are some of the key modifications I made to the projects:
 - [x] Day 25: Event Capture, Propagation, Bubbling and Once
 - [x] Day 26: Stripe Follow Along Nav
 - [x] Day 27: Click and Drag
-- [ ] Day 28: Video Speed Controller
-- [ ] Day 29: Countdown Timer
-- [ ] Day 30: Whack A Mole
+- [x] Day 28: Video Speed Controller
+- [x] Day 29: Countdown Timer
+- [x] Day 30: Whack A Mole
 
 ---
 
